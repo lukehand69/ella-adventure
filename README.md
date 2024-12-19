@@ -34,4 +34,8 @@ Built with:
 - [ ] Create basic HTML structure
 - [ ] Add story content
 - [ ] Style the interface
+<<<<<<< HEAD
 - [ ] Test on different devices 
+=======
+- [ ] Test on different devices
+>>>>>>> ecb8a4e81042e0e37357bf5a335eb5a4f28aa4dd
