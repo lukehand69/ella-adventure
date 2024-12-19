@@ -947,5 +947,382 @@ const sceneIllustrations = {
                 <text x="-15" y="-17" font-size="10">✓</text>
             </g>
         </svg>
+    `,
+    "aquarium-start": `
+        <svg viewBox="0 0 400 300">
+            <!-- Building interior -->
+            <rect x="0" y="0" width="400" height="300" fill="#E0E0E0"/>
+            <!-- Entrance arch -->
+            <path d="M50,0 L350,0 Q360,150 350,300 L50,300 Q40,150 50,0" 
+                fill="#1E90FF" opacity="0.3"/>
+            
+            <!-- Seahorse exhibit sign -->
+            <g transform="translate(200,50)">
+                <rect x="-60" y="-20" width="120" height="40" fill="#4169E1"/>
+                <text x="0" y="5" text-anchor="middle" fill="white" font-size="14">Seahorse
+                    <tspan x="0" y="20">Exhibit →</tspan>
+                </text>
+            </g>
+            
+            <!-- Characters -->
+            ${svgComponents.dad(150, 220)}
+            ${svgComponents.ella(120, 220, { pigtails: true })}
+            ${svgComponents.beth(180, 220)}
+        </svg>
+    `,
+    "aquarium-learning": `
+        <svg viewBox="0 0 400 300">
+            <!-- Tank background -->
+            <rect x="0" y="0" width="400" height="300" fill="#1E90FF"/>
+            <!-- Tank glass reflection -->
+            <rect x="50" y="50" width="300" height="200" fill="#E0FFFF" opacity="0.3"/>
+            
+            <!-- Seaweed -->
+            <g transform="translate(100,150)">
+                <path d="M0,0 Q10,-20 0,-40 Q-10,-60 0,-80" 
+                    stroke="#228B22" fill="none" stroke-width="4"/>
+                <path d="M20,0 Q30,-20 20,-40 Q10,-60 20,-80" 
+                    stroke="#228B22" fill="none" stroke-width="4"/>
+            </g>
+            
+            <!-- Seahorse -->
+            ${svgComponents.seahorse(200, 150)}
+            
+            <!-- Characters -->
+            ${svgComponents.beth(180, 220, { pointingArm: true })}
+            ${svgComponents.ella(120, 220, { pigtails: true, lookingUp: true })}
+            ${svgComponents.dad(150, 220)}
+        </svg>
+    `,
+    "seahorse-facts": `
+        <svg viewBox="0 0 400 300">
+            <!-- Tank background -->
+            <rect x="0" y="0" width="400" height="300" fill="#1E90FF"/>
+            <!-- Tank glass -->
+            <rect x="50" y="50" width="300" height="200" fill="#E0FFFF" opacity="0.3"/>
+            
+            <!-- Parent seahorse with babies -->
+            ${svgComponents.seahorse(180, 150)}
+            ${svgComponents.seahorse(200, 160, { baby: true })}
+            ${svgComponents.seahorse(190, 170, { baby: true })}
+            ${svgComponents.seahorse(210, 165, { baby: true })}
+            
+            <!-- Seaweed -->
+            <g transform="translate(150,150)">
+                <path d="M0,0 Q10,-20 0,-40 Q-10,-60 0,-80" 
+                    stroke="#228B22" fill="none" stroke-width="4"/>
+            </g>
+            
+            <!-- Characters -->
+            ${svgComponents.beth(180, 220)}
+            ${svgComponents.ella(120, 220, { pigtails: true, lookingUp: true })}
+            ${svgComponents.dad(150, 220)}
+        </svg>
+    `,
+    "seahorse-exhibit": `
+        <svg viewBox="0 0 400 300">
+            <!-- Tank background -->
+            <rect x="0" y="0" width="400" height="300" fill="#1E90FF"/>
+            <!-- Tank glass -->
+            <rect x="50" y="50" width="300" height="200" fill="#E0FFFF" opacity="0.3"/>
+            
+            <!-- Multiple seahorses -->
+            ${svgComponents.seahorse(150, 150)}
+            ${svgComponents.seahorse(200, 120, { color: '#FFA07A' })}
+            ${svgComponents.seahorse(250, 160, { color: '#98FB98' })}
+            
+            <!-- Seaweed forest -->
+            <g transform="translate(100,150)">
+                <path d="M0,0 Q10,-20 0,-40 Q-10,-60 0,-80" 
+                    stroke="#228B22" fill="none" stroke-width="4"/>
+                <path d="M20,0 Q30,-20 20,-40 Q10,-60 20,-80" 
+                    stroke="#228B22" fill="none" stroke-width="4"/>
+            </g>
+            
+            <!-- Characters -->
+            ${svgComponents.ella(120, 220, { pigtails: true, lookingUp: true })}
+            ${svgComponents.dad(150, 220)}
+            ${svgComponents.beth(180, 220)}
+            
+            <!-- Bubbles -->
+            <g>
+                <circle cx="160" cy="100" r="2" fill="white" opacity="0.6"/>
+                <circle cx="220" cy="80" r="3" fill="white" opacity="0.6"/>
+                <circle cx="180" cy="60" r="2" fill="white" opacity="0.6"/>
+            </g>
+        </svg>
+    `,
+    "color-change": `
+        <svg viewBox="0 0 400 300">
+            <!-- Tank background -->
+            <rect x="0" y="0" width="400" height="300" fill="#1E90FF"/>
+            <!-- Tank glass -->
+            <rect x="50" y="50" width="300" height="200" fill="#E0FFFF" opacity="0.3"/>
+            
+            <!-- Seaweed -->
+            <g transform="translate(150,150)">
+                <path d="M0,0 Q10,-20 0,-40 Q-10,-60 0,-80" 
+                    stroke="#228B22" fill="none" stroke-width="4"/>
+                <path d="M20,0 Q30,-20 20,-40 Q10,-60 20,-80" 
+                    stroke="#228B22" fill="none" stroke-width="4"/>
+            </g>
+            
+            <!-- Color-changing seahorse (showing transition) -->
+            ${svgComponents.seahorse(180, 150, { color: '#228B22' })}  <!-- Green -->
+            <g opacity="0.5">
+                ${svgComponents.seahorse(180, 150, { color: '#8B4513' })}  <!-- Brown fading in -->
+            </g>
+            
+            <!-- Characters -->
+            ${svgComponents.beth(180, 220, { pointingArm: true })}
+            ${svgComponents.ella(120, 220, { pigtails: true, lookingUp: true })}
+            ${svgComponents.dad(150, 220)}
+            
+            <!-- Bubbles -->
+            <g fill="white" opacity="0.6">
+                <circle cx="160" cy="100" r="2"/>
+                <circle cx="200" cy="80" r="3"/>
+                <circle cx="180" cy="120" r="2"/>
+            </g>
+            
+            <!-- Magnifying glass effect -->
+            <circle cx="180" cy="150" r="30" fill="none" stroke="white" stroke-width="1" opacity="0.5"/>
+        </svg>
+    `,
+    "baby-seahorses": `
+        <svg viewBox="0 0 400 300">
+            <!-- Tank background -->
+            <rect x="0" y="0" width="400" height="300" fill="#1E90FF"/>
+            <!-- Tank glass -->
+            <rect x="50" y="50" width="300" height="200" fill="#E0FFFF" opacity="0.3"/>
+            
+            <!-- Parent seahorses -->
+            ${svgComponents.seahorse(180, 150)}
+            
+            <!-- Baby seahorses -->
+            ${svgComponents.seahorse(200, 160, { baby: true })}
+            ${svgComponents.seahorse(190, 170, { baby: true })}
+            ${svgComponents.seahorse(210, 165, { baby: true })}
+            
+            <!-- Seaweed -->
+            <g transform="translate(150,150)">
+                <path d="M0,0 Q10,-20 0,-40 Q-10,-60 0,-80" 
+                    stroke="#228B22" fill="none" stroke-width="4"/>
+            </g>
+            
+            <!-- Characters -->
+            ${svgComponents.dad(150, 220, { pointingArm: true })}
+            ${svgComponents.ella(120, 220, { pigtails: true, lookingUp: true })}
+            ${svgComponents.beth(180, 220)}
+            
+            <!-- Bubbles -->
+            <g>
+                <circle cx="185" cy="140" r="2" fill="white" opacity="0.6"/>
+                <circle cx="195" cy="130" r="1" fill="white" opacity="0.6"/>
+            </g>
+        </svg>
+    `,
+    "seahorse-home": `
+        <svg viewBox="0 0 400 300">
+            <!-- Tank background -->
+            <rect x="0" y="0" width="400" height="300" fill="#1E90FF"/>
+            <!-- Tank glass -->
+            <rect x="50" y="50" width="300" height="200" fill="#E0FFFF" opacity="0.3"/>
+            
+            <!-- Seaweed forest -->
+            <g transform="translate(150,150)">
+                <path d="M0,0 Q10,-20 0,-40 Q-10,-60 0,-80" 
+                    stroke="#228B22" fill="none" stroke-width="4"/>
+                <path d="M20,0 Q30,-20 20,-40 Q10,-60 20,-80" 
+                    stroke="#228B22" fill="none" stroke-width="4"/>
+            </g>
+            
+            <!-- Seahorse anchored to seaweed -->
+            ${svgComponents.seahorse(180, 150)}
+            
+            <!-- Characters -->
+            ${svgComponents.beth(180, 220, { pointingArm: true })}
+            ${svgComponents.ella(120, 220, { pigtails: true, lookingUp: true })}
+            ${svgComponents.dad(150, 220)}
+            
+            <!-- Bubbles -->
+            <g>
+                <circle cx="160" cy="100" r="2" fill="white" opacity="0.6"/>
+                <circle cx="220" cy="80" r="3" fill="white" opacity="0.6"/>
+                <circle cx="180" cy="60" r="2" fill="white" opacity="0.6"/>
+            </g>
+        </svg>
+    `,
+    "swimming-seahorses": `
+        <svg viewBox="0 0 400 300">
+            <!-- Tank background -->
+            <rect x="0" y="0" width="400" height="300" fill="#1E90FF"/>
+            <!-- Tank glass -->
+            <rect x="50" y="50" width="300" height="200" fill="#E0FFFF" opacity="0.3"/>
+            
+            <!-- Swimming seahorses -->
+            ${svgComponents.seahorse(180, 120)}
+            ${svgComponents.seahorse(220, 150, { color: '#FFA07A' })}
+            
+            <!-- Motion lines -->
+            <g stroke="#fff" stroke-width="1" opacity="0.5">
+                <path d="M170,120 Q160,120 150,120"/>
+                <path d="M210,150 Q200,150 190,150"/>
+            </g>
+            
+            <!-- Seaweed -->
+            <g transform="translate(100,150)">
+                <path d="M0,0 Q10,-20 0,-40 Q-10,-60 0,-80" 
+                    stroke="#228B22" fill="none" stroke-width="4"/>
+            </g>
+            
+            <!-- Characters -->
+            ${svgComponents.beth(180, 220)}
+            ${svgComponents.ella(120, 220, { pigtails: true, lookingUp: true })}
+            ${svgComponents.dad(150, 220)}
+            
+            <!-- Bubbles -->
+            <g>
+                <circle cx="160" cy="100" r="2" fill="white" opacity="0.6"/>
+                <circle cx="200" cy="90" r="3" fill="white" opacity="0.6"/>
+                <circle cx="180" cy="70" r="2" fill="white" opacity="0.6"/>
+            </g>
+        </svg>
+    `,
+    "aquarium-end": `
+        <svg viewBox="0 0 400 300">
+            <!-- Building interior with sunset lighting -->
+            <rect x="0" y="0" width="400" height="300" fill="#FF7F50"/>
+            
+            <!-- Tank with seahorses -->
+            <g transform="translate(50,50)">
+                <rect x="0" y="0" width="300" height="200" fill="#1E90FF"/>
+                ${svgComponents.seahorse(150, 100)}
+                ${svgComponents.seahorse(200, 120, { baby: true })}
+                
+                <!-- Seaweed -->
+                <path d="M50,150 Q60,130 50,110" 
+                    stroke="#228B22" fill="none" stroke-width="4"/>
+            </g>
+            
+            <!-- Happy characters -->
+            ${svgComponents.ella(120, 220, { pigtails: true })}
+            ${svgComponents.dad(150, 220)}
+            ${svgComponents.beth(180, 220)}
+            
+            <!-- Sparkles -->
+            <g fill="#FFD700">
+                <text x="100" y="50" font-size="20">✨</text>
+                <text x="200" y="70" font-size="20">✨</text>
+                <text x="300" y="40" font-size="20">✨</text>
+            </g>
+        </svg>
+    `,
+    "spot-seahorses": `
+        <svg viewBox="0 0 400 300">
+            <!-- Tank background -->
+            <rect x="0" y="0" width="400" height="300" fill="#1E90FF"/>
+            <!-- Tank glass -->
+            <rect x="50" y="50" width="300" height="200" fill="#E0FFFF" opacity="0.3"/>
+            
+            <!-- Multiple camouflaged seahorses -->
+            ${svgComponents.seahorse(180, 150, { color: '#228B22' })}  <!-- Green to match seaweed -->
+            ${svgComponents.seahorse(220, 130, { color: '#8B4513' })}  <!-- Brown to match coral -->
+            
+            <!-- Seaweed and coral -->
+            <g transform="translate(150,150)">
+                <path d="M0,0 Q10,-20 0,-40 Q-10,-60 0,-80" 
+                    stroke="#228B22" fill="none" stroke-width="4"/>
+            </g>
+            
+            <!-- Characters -->
+            ${svgComponents.beth(180, 220, { pointingArm: true })}
+            ${svgComponents.ella(120, 220, { pigtails: true, lookingUp: true })}
+            ${svgComponents.dad(150, 220)}
+            
+            <!-- Magnifying glass effect -->
+            <circle cx="200" cy="140" r="30" fill="none" stroke="white" stroke-width="1" opacity="0.5"/>
+        </svg>
+    `,
+    "wait-group": `
+        <svg viewBox="0 0 400 300">
+            <!-- Building interior -->
+            <rect x="0" y="0" width="400" height="300" fill="#E0E0E0"/>
+            
+            <!-- Dad stopping Ella -->
+            ${svgComponents.dad(150, 220, { pointingArm: true })}
+            ${svgComponents.ella(120, 220, { pigtails: true })}
+            ${svgComponents.beth(180, 220)}
+            
+            <!-- Stop gesture -->
+            <path d="M140,180 L160,200" stroke="red" stroke-width="3"/>
+            <path d="M140,200 L160,180" stroke="red" stroke-width="3"/>
+        </svg>
+    `,
+    "tiny-seahorses": `
+        <svg viewBox="0 0 400 300">
+            <!-- Tank background -->
+            <rect x="0" y="0" width="400" height="300" fill="#1E90FF"/>
+            <!-- Tank glass -->
+            <rect x="50" y="50" width="300" height="200" fill="#E0FFFF" opacity="0.3"/>
+            
+            <!-- Parent and baby seahorses -->
+            ${svgComponents.seahorse(180, 150)}
+            ${svgComponents.seahorse(200, 160, { baby: true })}
+            ${svgComponents.seahorse(190, 170, { baby: true })}
+            ${svgComponents.seahorse(210, 165, { baby: true })}
+            
+            <!-- Magnifying glass effect -->
+            <circle cx="200" cy="160" r="30" fill="none" stroke="white" stroke-width="1" opacity="0.5"/>
+            
+            <!-- Characters -->
+            ${svgComponents.beth(180, 220)}
+            ${svgComponents.ella(120, 220, { pigtails: true, lookingUp: true })}
+            ${svgComponents.dad(150, 220)}
+        </svg>
+    `,
+    "seahorse-food": `
+        <svg viewBox="0 0 400 300">
+            <!-- Tank background -->
+            <rect x="0" y="0" width="400" height="300" fill="#1E90FF"/>
+            <!-- Tank glass -->
+            <rect x="50" y="50" width="300" height="200" fill="#E0FFFF" opacity="0.3"/>
+            
+            <!-- Seahorse eating -->
+            ${svgComponents.seahorse(180, 150)}
+            
+            <!-- Tiny food particles -->
+            <g fill="white" opacity="0.6">
+                <circle cx="170" cy="140" r="1"/>
+                <circle cx="175" cy="145" r="1"/>
+                <circle cx="180" cy="142" r="1"/>
+                <circle cx="177" cy="148" r="1"/>
+            </g>
+            
+            <!-- Characters -->
+            ${svgComponents.beth(180, 220, { pointingArm: true })}
+            ${svgComponents.ella(120, 220, { pigtails: true, lookingUp: true })}
+            ${svgComponents.dad(150, 220)}
+        </svg>
+    `,
+    "other-creatures": `
+        <svg viewBox="0 0 400 300">
+            <!-- Tank background -->
+            <rect x="0" y="0" width="400" height="300" fill="#1E90FF"/>
+            <!-- Tank glass -->
+            <rect x="50" y="50" width="300" height="200" fill="#E0FFFF" opacity="0.3"/>
+            
+            <!-- Seahorse -->
+            ${svgComponents.seahorse(180, 150)}
+            
+            <!-- Other sea creatures (simple shapes) -->
+            <path d="M220,120 Q230,110 240,120 T260,120" fill="#FF69B4"/> <!-- Starfish -->
+            <path d="M120,140 Q130,130 140,140 L130,150 Z" fill="#FFA07A"/> <!-- Small fish -->
+            
+            <!-- Characters -->
+            ${svgComponents.beth(180, 220)}
+            ${svgComponents.ella(120, 220, { pigtails: true, lookingUp: true })}
+            ${svgComponents.dad(150, 220)}
+        </svg>
     `
 }; 

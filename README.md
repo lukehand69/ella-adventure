@@ -7,16 +7,16 @@ An interactive story game where Ella gets to make choices and go on adventures!
 Main character: Ella (age 9)
 
 ### Story Ideas
-- [ ] Adventure 1: TBD
-- [ ] Adventure 2: TBD
-- [ ] Adventure 3: TBD
+- [x] Tower Hill Tale
+- [x] Beach Day Fun
+- [x] Garden Adventure
 
-### Game Features to Add
-- [ ] Basic choice system
-- [ ] Save progress
-- [ ] Fun colors/styling
-- [ ] Sound effects (maybe)
-- [ ] Background images (maybe)
+### Game Features Added
+- [x] Basic choice system
+- [x] Fun colors/styling
+- [x] Sound effects
+- [x] SVG illustrations
+- [x] Mobile-friendly design
 
 ## Technical Notes
 
@@ -24,18 +24,16 @@ Built with:
 - HTML
 - CSS
 - JavaScript
+- SVG Graphics
 
 ### Development Notes
-- Game saves progress using localStorage
 - Mobile-friendly design
 - Works offline once loaded
+- Interactive story choices
+- Custom illustrations
 
 ## Todo List
-- [ ] Create basic HTML structure
-- [ ] Add story content
-- [ ] Style the interface
-<<<<<<< HEAD
-- [ ] Test on different devices 
-=======
-- [ ] Test on different devices
->>>>>>> ecb8a4e81042e0e37357bf5a335eb5a4f28aa4dd
+- [x] Create basic HTML structure
+- [x] Add story content
+- [x] Style the interface
+- [x] Test on different devices
