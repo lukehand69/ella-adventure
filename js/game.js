@@ -2,39 +2,16 @@ class Game {
     constructor() {
         this.currentStory = null;
         this.currentScene = null;
-        this.isMuted = false;
         this.stories = stories;
         
         this.init();
     }
 
     init() {
-        this.checkHomeScreenPrompt();
         this.setupEventListeners();
     }
 
-    checkHomeScreenPrompt() {
-        // Check if running as installed PWA
-        const isStandalone = window.matchMedia('(display-mode: standalone)').matches;
-        
-        if (!isStandalone && !localStorage.getItem('promptShown')) {
-            const prompt = document.getElementById('homeScreenPrompt');
-            prompt.classList.remove('hidden');
-        }
-    }
-
     setupEventListeners() {
-        // Mute button
-        document.getElementById('muteButton').addEventListener('click', () => {
-            this.toggleMute();
-        });
-
-        // Home screen prompt
-        document.getElementById('closePrompt')?.addEventListener('click', () => {
-            document.getElementById('homeScreenPrompt').classList.add('hidden');
-            localStorage.setItem('promptShown', 'true');
-        });
-
         // Story selection
         document.querySelectorAll('.story-card').forEach(card => {
             card.addEventListener('click', (e) => {
@@ -49,18 +26,6 @@ class Game {
         });
     }
 
-    toggleMute() {
-        this.isMuted = !this.isMuted;
-        const muteButton = document.getElementById('muteButton');
-        muteButton.textContent = this.isMuted ? '🔇' : '🎵';
-        
-        if (this.isMuted) {
-            window.audioManager.muteAll();
-        } else {
-            window.audioManager.unmuteAll();
-        }
-    }
-
     startStory(storyId) {
         document.getElementById('mainMenu').classList.remove('active');
         document.getElementById('storyContainer').classList.add('active');
@@ -73,9 +38,6 @@ class Game {
         this.currentStory = this.stories[storyId];
         this.currentScene = 'start';
         this.showScene();
-        
-        // Play theme music for this story
-        window.audioManager.playTheme(this.currentStory.theme);
     }
 
     showScene() {
@@ -119,7 +81,6 @@ class Game {
     }
 
     makeChoice(choice) {
-        window.audioManager.playSound('choice');
         if (choice.next === 'menu') {
             this.showMainMenu();
             return;
@@ -131,9 +92,6 @@ class Game {
     showMainMenu() {
         document.getElementById('storyContainer').classList.remove('active');
         document.getElementById('mainMenu').classList.add('active');
-        if (this.currentTheme) {
-            window.audioManager.stopTheme();
-        }
     }
 }
 

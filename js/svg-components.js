@@ -219,5 +219,59 @@ const svgComponents = {
                 <path d="M${options.baby ? 0 : 1},${options.baby ? -2 : -4} Q${options.baby ? 2 : 3},${options.baby ? -3 : -5} ${options.baby ? 4 : 5},${options.baby ? -2 : -4}" stroke="black" fill="none"/>
             ` : ''}
         </g>
+    `,
+
+    beth: (x, y, options = {}) => `
+        <g transform="translate(${x},${y})">
+            <!-- Body -->
+            <rect x="-12" y="-45" width="24" height="35" fill="#FF69B4"/>
+            
+            <!-- Head -->
+            <circle cx="0" cy="-55" r="10" fill="#FFE4E1"/>
+            
+            <!-- Hair -->
+            <path d="M-12,-60 Q-10,-70 0,-65 Q10,-70 12,-60" 
+                fill="#8B4513" stroke="#8B4513" stroke-width="2"/>
+            
+            <!-- Face -->
+            <circle cx="-3" cy="-56" r="1" fill="#000"/>  <!-- Left eye -->
+            <circle cx="3" cy="-56" r="1" fill="#000"/>   <!-- Right eye -->
+            <path d="M-2,-53 Q0,-51 2,-53" fill="none" stroke="#000" stroke-width="0.5"/> <!-- Smile -->
+            
+            <!-- Glasses -->
+            <rect x="-5" y="-58" width="10" height="4" rx="1" 
+                fill="none" stroke="#333" stroke-width="0.5"/>
+        </g>
+    `,
+
+    seahorse: (x, y, options = {}) => `
+        <g transform="translate(${x},${y})">
+            <!-- Body -->
+            <path d="M0,0 Q-10,-10 -5,-20 Q0,-30 5,-20 Q10,-10 0,0" 
+                fill="${options.color || '#FFD700'}" 
+                stroke="#333" stroke-width="0.5"/>
+            
+            <!-- Head -->
+            <path d="M-5,-20 Q-8,-25 -5,-30 Q-2,-35 0,-30 Q2,-25 -2,-20" 
+                fill="${options.color || '#FFD700'}" 
+                stroke="#333" stroke-width="0.5"/>
+            
+            <!-- Snout -->
+            <path d="M-5,-30 Q-7,-32 -5,-34" 
+                fill="none" stroke="#333" stroke-width="0.5"/>
+            
+            <!-- Eye -->
+            <circle cx="-4" cy="-28" r="0.8" fill="#333"/>
+            
+            <!-- Fins -->
+            <path d="M0,-15 Q5,-15 3,-12" 
+                fill="${options.color || '#FFD700'}" 
+                stroke="#333" stroke-width="0.3"/>
+            
+            ${options.baby ? `
+                <!-- Make it smaller for baby -->
+                transform="scale(0.6)"
+            ` : ''}
+        </g>
     `
 }; 

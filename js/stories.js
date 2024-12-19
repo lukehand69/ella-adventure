@@ -276,8 +276,8 @@ const stories = {
                 illustration: "beach-sunscreen",
                 choices: [
                     {
-                        text: "Now help dad with the kite",
-                        next: "setup-kites",
+                        text: "Check the beach flags",
+                        next: "safety-check",
                         type: "best"
                     },
                     {
@@ -313,8 +313,8 @@ const stories = {
                         type: "best"
                     },
                     {
-                        text: "Put on sunscreen first",
-                        next: "sunscreen",
+                        text: "Look for shells nearby",
+                        next: "shell-hunting",
                         type: "good"
                     }
                 ]
@@ -410,8 +410,8 @@ const stories = {
                         type: "best"
                     },
                     {
-                        text: "Look for baby tomatoes",
-                        next: "spot-tomatoes",
+                        text: "Learn about garden helpers",
+                        next: "bug-hunting",
                         type: "good"
                     }
                 ]
@@ -587,8 +587,8 @@ const stories = {
                         type: "best"
                     },
                     {
-                        text: "Look for more garden tasks",
-                        next: "garden-tasks",
+                        text: "Plant flowers to help them grow",
+                        next: "planting-flowers",
                         type: "good"
                     }
                 ]
@@ -616,6 +616,226 @@ const stories = {
                     {
                         text: "Learn about caring for tomatoes",
                         next: "tomato-care",
+                        type: "good"
+                    }
+                ]
+            }
+        }
+    },
+    "aquarium": {
+        title: "Aquarium Adventure",
+        theme: "nature",
+        scenes: {
+            start: {
+                text: "Ella is excited to visit the aquarium with Dad and Beth! As they walk through the entrance, Ella spots a sign about a special seahorse exhibit.",
+                illustration: "aquarium-start",
+                choices: [
+                    {
+                        text: "Go straight to the seahorse exhibit",
+                        next: "seahorse-exhibit",
+                        type: "good"
+                    },
+                    {
+                        text: "Ask Beth about seahorses first",
+                        next: "beth-explains",
+                        type: "best"
+                    },
+                    {
+                        text: "Run ahead without waiting",
+                        next: "wait-group",
+                        type: "silly"
+                    }
+                ]
+            },
+            "beth-explains": {
+                text: "'Seahorses are amazing creatures!' Beth tells Ella. 'They're actually fish, even though they look so different. Would you like to learn more about them?'",
+                illustration: "aquarium-learning",
+                choices: [
+                    {
+                        text: "Learn seahorse facts from Beth",
+                        next: "seahorse-facts",
+                        type: "best"
+                    },
+                    {
+                        text: "Go see them right away",
+                        next: "seahorse-exhibit",
+                        type: "good"
+                    }
+                ]
+            },
+            "seahorse-facts": {
+                text: "'Male seahorses carry the babies,' Beth explains. 'And they change color to hide from predators!' Ella is fascinated by these special creatures.",
+                illustration: "seahorse-facts",
+                choices: [
+                    {
+                        text: "Look for color-changing seahorses",
+                        next: "color-change",
+                        type: "best"
+                    },
+                    {
+                        text: "Ask about baby seahorses",
+                        next: "baby-seahorses",
+                        type: "good"
+                    }
+                ]
+            },
+            "color-change": {
+                text: "Beth points to a seahorse that's changing from green to brown to match the seaweed. 'They're masters of camouflage!' she says. Ella watches in amazement.",
+                illustration: "color-change",
+                choices: [
+                    {
+                        text: "Try to spot more hidden seahorses",
+                        next: "spot-seahorses",
+                        type: "best"
+                    },
+                    {
+                        text: "Learn about their habitat",
+                        next: "seahorse-home",
+                        type: "good"
+                    }
+                ]
+            },
+            "spot-seahorses": {
+                text: "Ella looks carefully and finds more seahorses hiding in the seaweed! 'They're so good at blending in,' she whispers excitedly.",
+                illustration: "spot-seahorses",
+                choices: [
+                    {
+                        text: "Watch them swim around",
+                        next: "swimming-seahorses",
+                        type: "best"
+                    },
+                    {
+                        text: "Learn about their home",
+                        next: "seahorse-home",
+                        type: "good"
+                    }
+                ]
+            },
+            "baby-seahorses": {
+                text: "'Look!' Dad points to a male seahorse with a special pouch. 'That's where he keeps the babies safe until they're ready to swim on their own.'",
+                illustration: "baby-seahorses",
+                choices: [
+                    {
+                        text: "Watch for baby seahorses",
+                        next: "tiny-seahorses",
+                        type: "best"
+                    },
+                    {
+                        text: "Learn about their food",
+                        next: "seahorse-food",
+                        type: "good"
+                    }
+                ]
+            },
+            "tiny-seahorses": {
+                text: "Suddenly, tiny baby seahorses emerge from the father's pouch! They're so small and cute, swimming around their dad. 'They stay close to their father until they're bigger,' Beth explains.",
+                illustration: "tiny-seahorses",
+                choices: [
+                    {
+                        text: "Watch them swim together",
+                        next: "swimming-seahorses",
+                        type: "best"
+                    },
+                    {
+                        text: "Learn what they eat",
+                        next: "seahorse-food",
+                        type: "good"
+                    }
+                ]
+            },
+            "seahorse-food": {
+                text: "'Seahorses eat tiny sea creatures called plankton,' Beth explains. 'They use their long snouts like straws to suck up their food!' Ella watches as a seahorse catches its lunch.",
+                illustration: "seahorse-food",
+                choices: [
+                    {
+                        text: "Watch them swim more",
+                        next: "swimming-seahorses",
+                        type: "best"
+                    },
+                    {
+                        text: "Look at other sea creatures",
+                        next: "other-creatures",
+                        type: "good"
+                    }
+                ]
+            },
+            "seahorse-home": {
+                text: "Beth shows Ella how seahorses wrap their tails around seaweed to anchor themselves. 'This is how they stay safe in strong currents,' she explains.",
+                illustration: "seahorse-home",
+                choices: [
+                    {
+                        text: "Watch them swim",
+                        next: "swimming-seahorses",
+                        type: "best"
+                    },
+                    {
+                        text: "Look for more sea creatures",
+                        next: "other-creatures",
+                        type: "good"
+                    }
+                ]
+            },
+            "swimming-seahorses": {
+                text: "The seahorses float gracefully through the water, using their tiny fins. 'They're such gentle swimmers,' Beth says. Ella could watch them all day!",
+                illustration: "swimming-seahorses",
+                choices: [
+                    {
+                        text: "Thank Beth for teaching about seahorses",
+                        next: "aquarium-end",
+                        type: "best"
+                    }
+                ]
+            },
+            "aquarium-end": {
+                text: "What a wonderful day at the aquarium! Ella learned so much about seahorses from Beth and Dad. She can't wait to tell her friends about these amazing creatures! 👍",
+                illustration: "aquarium-end",
+                choices: [
+                    {
+                        text: "Start a new adventure",
+                        next: "menu",
+                        type: "menu"
+                    }
+                ]
+            },
+            "seahorse-exhibit": {
+                text: "The seahorse tank is amazing! There are seahorses of different colors and sizes swimming gracefully through the water.",
+                illustration: "seahorse-exhibit",
+                choices: [
+                    {
+                        text: "Ask Beth about their colors",
+                        next: "color-change",
+                        type: "best"
+                    },
+                    {
+                        text: "Look for baby seahorses",
+                        next: "baby-seahorses",
+                        type: "good"
+                    }
+                ]
+            },
+            "other-creatures": {
+                text: "There are other sea creatures in the tank too! Ella sees colorful fish and a starfish. 'The seahorses share their home with lots of friends,' Beth explains.",
+                illustration: "other-creatures",
+                choices: [
+                    {
+                        text: "Watch the seahorses swim",
+                        next: "swimming-seahorses",
+                        type: "best"
+                    }
+                ]
+            },
+            "wait-group": {
+                text: "'Wait for us, Ella!' Dad calls. 'We need to stay together so we don't get lost. Plus, Beth knows lots of interesting things about seahorses!'",
+                illustration: "wait-group",
+                choices: [
+                    {
+                        text: "Go back and ask Beth about seahorses",
+                        next: "beth-explains",
+                        type: "best"
+                    },
+                    {
+                        text: "Wait and walk together",
+                        next: "seahorse-exhibit",
                         type: "good"
                     }
                 ]
